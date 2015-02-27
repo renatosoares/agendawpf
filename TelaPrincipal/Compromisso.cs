@@ -13,11 +13,19 @@ namespace TelaPrincipal
         public string HInicial { set; get; }
         public string HFinal { set; get; }
         public bool Urgente { set; get; }
+       
 
     }
 
-    public class Compromissos : List<Compromissos>
+    public class Compromissos : List<Compromisso>
     { 
+    }
+
+    public class ItemListar 
+    {
+        string nome;
+        
+ 
     }
 
 }

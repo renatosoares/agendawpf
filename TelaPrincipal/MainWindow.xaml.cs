@@ -35,5 +35,30 @@ namespace TelaPrincipal
             
 
         }
+
+        private void Listar(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            DataGrid1.ItemsSource = null;
+            Compromisso c = new Compromisso();
+            c.Nome = "Renato";
+            c.Urgente = true;
+            c.HFinal ="14h";
+            c.HInicial = "11h";
+            c.Data = DateTime.Parse("11/11/1990");
+            Compromissos l = new Compromissos();
+
+
+
+            l.Add(c);
+            DataGrid1.ItemsSource = l;
+          //  DataGrid1.ItemTemplate.
+        }
+
+
     }
 }
