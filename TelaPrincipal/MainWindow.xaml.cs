@@ -20,9 +20,20 @@ namespace TelaPrincipal
     /// </summary>
     public partial class MainWindow : Window
     {
+        Compromissos Lcomp;
         public MainWindow()
         {
             InitializeComponent();
+            Lcomp = new Compromissos();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            JanelaAdicionar j = new JanelaAdicionar();
+            j.Referenciar(this.Lcomp);
+            j.ShowDialog();
+            
+
         }
     }
 }
