@@ -21,11 +21,4 @@ namespace TelaPrincipal
     { 
     }
 
-    public class ItemListar 
-    {
-        string nome;
-        
- 
-    }
-
 }

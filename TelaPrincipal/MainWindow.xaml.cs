@@ -24,39 +24,48 @@ namespace TelaPrincipal
         public MainWindow()
         {
             InitializeComponent();
-            Lcomp = new Compromissos();
+            AbrirArquivo();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void AbrirArquivo()
+        {
+            try
+            {
+                // Tenta recuperar o objeto r da classe T do
+                // arquivo "arquivo"
+                Persistencia<Compromissos> arq = new Persistencia<Compromissos>();
+                Lcomp = arq.AbrirArquivo("c:\\temp\\compromissos.xml");
+            }
+            catch
+            {
+                // Se não existia o arquivo, um novo objeto
+                // da classe T é instanciado
+                Lcomp = new Compromissos();
+            }
+
+            Listar();
+        }
+
+
+
+        public void Listar()
+        {
+            var listaDataGridFormat = Lcomp.Select(v => new { v.Nome, v.Data }).OrderBy(v => v.Data);
+            DataGrid1.ItemsSource = listaDataGridFormat;
+        }
+ 
+       
+
+        private void AbrirJanelaAdicionar(object sender, RoutedEventArgs e)
         {
             JanelaAdicionar j = new JanelaAdicionar();
             j.Referenciar(this.Lcomp);
             j.ShowDialog();
-            
 
-        }
-
-        private void Listar(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            DataGrid1.ItemsSource = null;
-            Compromisso c = new Compromisso();
-            c.Nome = "Renato";
-            c.Urgente = true;
-            c.HFinal ="14h";
-            c.HInicial = "11h";
-            c.Data = DateTime.Parse("11/11/1990");
-            Compromissos l = new Compromissos();
-
-
-
-            l.Add(c);
-            DataGrid1.ItemsSource = l;
-          //  DataGrid1.ItemTemplate.
+            if(j.DialogResult ==  true)
+            {
+                Listar();
+            }
         }
 
 

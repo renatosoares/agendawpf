@@ -9,9 +9,8 @@
         <Rectangle HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="892" Fill="#FFE4FFF8"/>
         <Rectangle HorizontalAlignment="Left" Height="351" VerticalAlignment="Top" Width="540" Fill="#FFE6E6E6" Margin="326,93,0,0"/>
         <Calendar HorizontalAlignment="Left" Margin="477,133,0,0" VerticalAlignment="Top" Height="210" Width="353"/>
-        <Button Content="Adicionar" HorizontalAlignment="Left" Margin="105,26,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="Button_Click"/>
-        <Button Content="Listar" HorizontalAlignment="Left" Margin="227,26,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="Listar"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="360,26,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="Button_Click_1"/>
+        <Button Content="Adicionar" HorizontalAlignment="Left" Margin="105,26,0,0" VerticalAlignment="Top" Width="96" Height="26" Click="AbrirJanelaAdicionar"/>
+  
         <DataGrid x:Name="DataGrid1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,113,0,0" Width="233" Height="319"/>
 
 

@@ -9,7 +9,7 @@
         <TextBox x:Name="TB2AHInicial" HorizontalAlignment="Left" Height="23" Margin="115,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69"/>
         <DatePicker x:Name="DatePicker" HorizontalAlignment="Left" Margin="41,101,0,0" VerticalAlignment="Top" Width="188"/>
         <CheckBox x:Name="CheckBox1" Content="Urgente" HorizontalAlignment="Left" Margin="41,196,0,0" VerticalAlignment="Top"/>
-        <Button Content="Adicionar" HorizontalAlignment="Left" Margin="44,222,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Adicionar" HorizontalAlignment="Left" Margin="44,222,0,0" VerticalAlignment="Top" Width="75" Click="Adicionar"/>
         <Button Content="Cancelar" HorizontalAlignment="Left" Margin="154,222,0,0" VerticalAlignment="Top" Width="75" Click="Cancelar"/>
         <Label Content="Hora Final" HorizontalAlignment="Left" Margin="201,141,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TB3AHFinal" HorizontalAlignment="Left" Height="23" Margin="275,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="69"/>

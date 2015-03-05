@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace TelaPrincipal
 {
@@ -35,7 +37,7 @@ namespace TelaPrincipal
             this.LcompAdd = cs;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Adicionar(object sender, RoutedEventArgs e)
         {
             Compromisso c = new Compromisso();
             c.Nome = TB1A.Text;
@@ -44,21 +46,34 @@ namespace TelaPrincipal
             c.HInicial = TB2AHInicial.Text;
             c.HFinal = TB3AHFinal.Text;
 
+            LcompAdd.Add(c);
+            SalvarArquivo();
+            Clear();
+            MessageBox.Show ("O compromisso foi adicionado com sucesso!");
 
             
-            
-
-          //  if (c.HFinal > TB2AHInicial.Text) { 
-
-            
-
-
-            
-
-
+            DialogResult = true;
+            this.Close();
+               
         }
 
+ 
 
+        public void SalvarArquivo ()
+        {  
+            Persistencia<Compromissos> arq =
+            new Persistencia<Compromissos>();
+            arq.SalvarArquivo("c:\\temp\\compromissos.xml", LcompAdd);
+        }
 
+        public void Clear()
+        {
+            TB1A.Text = "";
+            TB2AHInicial.Text = "";
+            TB3AHFinal.Text = "";
+            CheckBox1.IsChecked = false;
+            DatePicker.ClearValue(DatePicker.SelectedDateProperty);
+        }
+ 
     }
 }

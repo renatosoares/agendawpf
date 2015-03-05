@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Agenda
+namespace TelaPrincipal
 {
-    class Persistencia<T>
+    public class Persistencia<T>
     {
         public void SalvarArquivo(string arquivo, T obj)
         {
