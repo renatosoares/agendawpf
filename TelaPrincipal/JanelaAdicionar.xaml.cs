@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Xml.Serialization;
 
+
 namespace TelaPrincipal
 {
     /// <summary>
@@ -45,12 +46,14 @@ namespace TelaPrincipal
             c.Urgente = (bool)CheckBox1.IsChecked;
             c.HInicial = TB2AHInicial.Text;
             c.HFinal = TB3AHFinal.Text;
+            
+            
+            
 
             LcompAdd.Add(c);
             SalvarArquivo();
             Clear();
             MessageBox.Show ("O compromisso foi adicionado com sucesso!");
-
             
             DialogResult = true;
             this.Close();

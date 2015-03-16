@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace TelaPrincipal
 {
     /// <summary>
@@ -50,8 +51,8 @@ namespace TelaPrincipal
 
         public void Listar()
         {
-            var listaDataGridFormat = Lcomp.Select(v => new { v.Nome, v.Data }).OrderBy(v => v.Data);
-            DataGrid1.ItemsSource = listaDataGridFormat;
+            var listaDataGridFormat = Lcomp.Select(v => new { v.Nome, v.Data, v.Urgente}).OrderBy(v => v.Data);
+            DataGrid1.ItemsSource = listaDataGridFormat;           
         }
  
        
