@@ -1,7 +1,7 @@
 ﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Name="janelaPrincipal" x:Class="TelaPrincipal.MainWindow"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Name="janelaPrincipal" x:Class="TelaPrincipal.MainWindow"
         Title="MainWindow" Height="562.687" Width="900">
 
     <TabControl x:Name="tabelaAbas" HorizontalAlignment="Left" Height="533" VerticalAlignment="Top" Width="892" Margin="0,0,0,-1">
@@ -26,15 +26,15 @@
         </TabItem>
 
         <TabItem Header="Semana">
-            <Grid Background="#FFE5E5E5"/>
+            <Grid x:Name="abasemana" Background="#FFE5E5E5" Margin="0,5,0,0" HorizontalAlignment="Left" Width="886">
+
+            
+            </Grid>
         </TabItem>
 
         <TabItem Header="Mês">
-            <Grid x:Name="abaMes" Background="#FFE5E5E5">
-                <Viewbox Stretch="Fill" Width="750" Height="420" >
-                    <Calendar x:Name="MonthlyCalendar" SelectionMode="MultipleRange" BorderThickness="0" />
-                </Viewbox>
-
+            <Grid x:Name="abaMes" Background="#FFE5E5E5" Margin="0,5,0,0" HorizontalAlignment="Left" Width="886">
+                <Button Content="abrir mes" HorizontalAlignment="Left" Margin="327,113,0,0" VerticalAlignment="Top" Width="142" Height="226" Click="Button_Click"/>
             </Grid>
         </TabItem>
 

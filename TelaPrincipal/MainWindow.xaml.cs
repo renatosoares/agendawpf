@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Globalization;
+
 
 
 
@@ -28,36 +30,15 @@ namespace TelaPrincipal
             InitializeComponent();
             AbrirArquivo();
          //   AddSelectedDates();  
-           SetBlackOutDates();
-          // setDisplayDates(); 
-        }
-
-        private void setDisplayDates()
-        {
-            MonthlyCalendar.DisplayDateStart = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-
-            MonthlyCalendar.DisplayDateEnd = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
-        }
-      private void SetBlackOutDates()  
-      {  
-          
-          MonthlyCalendar.BlackoutDates.Add(new CalendarDateRange(  
-              new DateTime(2015, 3, 1)
-              
-              ));  
-          MonthlyCalendar.BlackoutDates.Add(new CalendarDateRange(  
-              new DateTime(2015, 3, 8)
-              ));  
            
-      }  
-        private void AddSelectedDates()  
-        {  
-            MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 5));  
-            MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 15));  
-            MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 25));  
-        }  
+          // setDisplayDates(); 
 
-      
+
+
+
+
+        }
+
        
 
 
@@ -101,6 +82,41 @@ namespace TelaPrincipal
                 Listar();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            WindowMes jm = new WindowMes();
+            jm.Show();
+        }
+
+        // abaixo, manipulação de datas
+        private void setDisplayDates()
+        {
+
+            MonthlyCalendar.DisplayDateStart = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+
+            MonthlyCalendar.DisplayDateEnd = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
+        }
+        private void SetBlackOutDates()
+        {
+
+            MonthlyCalendar.BlackoutDates.Add(new CalendarDateRange(
+                new DateTime(2015, 3, 1)
+
+                ));
+            MonthlyCalendar.BlackoutDates.Add(new CalendarDateRange(
+                new DateTime(2015, 3, 8)
+                ));
+
+        }
+        private void AddSelectedDates()
+        {
+
+            MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 5));
+            MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 15));
+            MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 25));
+        }
+  
 
 
     }
