@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
+
 namespace TelaPrincipal
 {
     /// <summary>
@@ -26,7 +27,39 @@ namespace TelaPrincipal
         {
             InitializeComponent();
             AbrirArquivo();
+         //   AddSelectedDates();  
+           SetBlackOutDates();
+          // setDisplayDates(); 
         }
+
+        private void setDisplayDates()
+        {
+            MonthlyCalendar.DisplayDateStart = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+
+            MonthlyCalendar.DisplayDateEnd = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
+        }
+      private void SetBlackOutDates()  
+      {  
+          
+          MonthlyCalendar.BlackoutDates.Add(new CalendarDateRange(  
+              new DateTime(2015, 3, 1)
+              
+              ));  
+          MonthlyCalendar.BlackoutDates.Add(new CalendarDateRange(  
+              new DateTime(2015, 3, 8)
+              ));  
+           
+      }  
+        private void AddSelectedDates()  
+        {  
+            MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 5));  
+            MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 15));  
+            MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 25));  
+        }  
+
+      
+       
+
 
         public void AbrirArquivo()
         {
@@ -72,3 +105,6 @@ namespace TelaPrincipal
 
     }
 }
+// http://www.codeproject.com/Articles/30329/Creating-an-Outlook-Calendar-using-WPF-Part
+// http://www.c-sharpcorner.com/uploadfile/mahesh/wpf-calendar-control/
+// http://www.jarloo.com/wpf-calendar-control/
