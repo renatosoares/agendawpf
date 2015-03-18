@@ -34,7 +34,8 @@
 
         <TabItem Header="Mês">
             <Grid x:Name="abaMes" Background="#FFE5E5E5" Margin="0,5,0,0" HorizontalAlignment="Left" Width="886">
-                <Button Content="abrir mes" HorizontalAlignment="Left" Margin="327,113,0,0" VerticalAlignment="Top" Width="142" Height="226" Click="Button_Click"/>
+                
+                <Button x:Name="btWindowsMes" Content="windowsMes" Width="200" Height="300" Margin="546,107,140,93" Click="abrirWindowMes"/>
             </Grid>
         </TabItem>
 

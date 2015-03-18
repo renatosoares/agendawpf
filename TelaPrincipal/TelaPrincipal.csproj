@@ -60,10 +60,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="janelaMes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,9 +72,6 @@
     <Compile Include="CompromissoUrgente.cs" />
     <Compile Include="JanelaAdicionar.xaml.cs">
       <DependentUpon>JanelaAdicionar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="janelaMes.xaml.cs">
-      <DependentUpon>janelaMes.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -116,12 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Jarloo.Calendar\Jarloo.Calendar.csproj">
-      <Project>{31c3b4a7-504b-4eff-bacc-c8f2ffe5af6f}</Project>
-      <Name>Jarloo.Calendar</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

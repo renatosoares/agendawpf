@@ -83,13 +83,9 @@ namespace TelaPrincipal
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            WindowMes jm = new WindowMes();
-            jm.Show();
-        }
-
-        // abaixo, manipulação de datas
+   
+        // abaixo, manipulação de calendário
+        /*
         private void setDisplayDates()
         {
 
@@ -115,6 +111,13 @@ namespace TelaPrincipal
             MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 5));
             MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 15));
             MonthlyCalendar.SelectedDates.Add(new DateTime(2015, 3, 25));
+        }
+        acima, manipulação de calendário*/
+
+        private void abrirWindowMes(object sender, RoutedEventArgs e)
+        {
+            WindowMes wm = new WindowMes();
+            wm.Show();
         }
   
 
