@@ -112,7 +112,7 @@ namespace TelaPrincipal
 
         public void visualizarMes()
         {
-            var listaMes = Lcomp.Select(v => new { v.Nome, v.Data, v.HInicial, v.HFinal, v.Urgente }).OrderBy(v => v.Data);
+            var listaMes = Lcomp.Select(v => new { v.Data.Month, v.HInicial, v.HFinal, v.Urgente }).OrderBy(v => v.Data);
             dgListaMes.ItemsSource = listaMes; 
         }
         
