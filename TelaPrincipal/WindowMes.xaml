@@ -1,9 +1,0 @@
-﻿<Window x:Class="TelaPrincipal.WindowMes"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="WindowMes" Height="300" Width="300">
-    <Grid>
-        <DataGrid x:Name="dgVisualizaMes" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="249" Width="272"/>
-
-    </Grid>
-</Window>

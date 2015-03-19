@@ -29,6 +29,7 @@ namespace TelaPrincipal
         {
             InitializeComponent();
             AbrirArquivo();
+            visualizarMes();
          //   AddSelectedDates();  
            
           // setDisplayDates(); 
@@ -111,7 +112,7 @@ namespace TelaPrincipal
 
         public void visualizarMes()
         {
-            var listaMes = Lcomp.Select(v => new { v.Nome, v.Data, v.Urgente }).OrderBy(v => v.Data);
+            var listaMes = Lcomp.Select(v => new { v.Nome, v.Data, v.HInicial, v.HFinal, v.Urgente }).OrderBy(v => v.Data);
             dgListaMes.ItemsSource = listaMes; 
         }
         
