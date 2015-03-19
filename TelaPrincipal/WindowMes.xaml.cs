@@ -19,9 +19,20 @@ namespace TelaPrincipal
     /// </summary>
     public partial class WindowMes : Window
     {
+        Compromissos listaCompromissos;
         public WindowMes()
         {
             InitializeComponent();
+            listaCompromissos = new Compromissos();
+            retornaMes();
+        }
+        public void retornaMes()
+        {
+            abrirArquivo<Compromissos>(ref compromis, "c:\\temp\\compromissos.xml");
+            lbCompromissos.ItemsSource = null;
+            lbCompromissos.ItemsSource = compromis;
+           // dgVisualizaMes.ItemsSource = null;
+           // dgVisualizaMes.ItemsSource = listaCompromissos;
         }
     }
 }

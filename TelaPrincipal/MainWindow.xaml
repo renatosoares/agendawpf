@@ -28,14 +28,16 @@
         <TabItem Header="Semana">
             <Grid x:Name="abasemana" Background="#FFE5E5E5" Margin="0,5,0,0" HorizontalAlignment="Left" Width="886">
 
-            
+
             </Grid>
         </TabItem>
 
         <TabItem Header="Mês">
             <Grid x:Name="abaMes" Background="#FFE5E5E5" Margin="0,5,0,0" HorizontalAlignment="Left" Width="886">
-                
-                <Button x:Name="btWindowsMes" Content="windowsMes" Width="200" Height="300" Margin="546,107,140,93" Click="abrirWindowMes"/>
+                <DataGrid x:Name="dgListaMes" HorizontalAlignment="Left" Height="404" Margin="102,86,0,0" VerticalAlignment="Top" Width="682"/>
+                <Button Content="&gt;" HorizontalAlignment="Left" Margin="801,173,0,0" VerticalAlignment="Top" Width="75" Height="127" FontSize="50" BorderThickness="0" Background="#FFD4D4D4" Foreground="#FF6A6A6A"/>
+                <Button Content="&lt;" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top" Width="75" Height="127" FontSize="50" BorderThickness="0" Background="#FFD4D4D4" Foreground="#FF6A6A6A"/>
+                <TextBox Height="23" Margin="303,30,0,0" TextWrapping="Wrap" Text="Retorno do mês" VerticalAlignment="Top" Width="302" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Left"/>
             </Grid>
         </TabItem>
 

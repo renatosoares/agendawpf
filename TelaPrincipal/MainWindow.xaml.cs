@@ -32,11 +32,6 @@ namespace TelaPrincipal
          //   AddSelectedDates();  
            
           // setDisplayDates(); 
-
-
-
-
-
         }
 
        
@@ -114,11 +109,13 @@ namespace TelaPrincipal
         }
         acima, manipulação de calendário*/
 
-        private void abrirWindowMes(object sender, RoutedEventArgs e)
+        public void visualizarMes()
         {
-            WindowMes wm = new WindowMes();
-            wm.Show();
+            var listaMes = Lcomp.Select(v => new { v.Nome, v.Data, v.Urgente }).OrderBy(v => v.Data);
+            dgListaMes.ItemsSource = listaMes; 
         }
+        
+
   
 
 

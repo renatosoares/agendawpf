@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="WindowMes" Height="300" Width="300">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Margin="36,47,0,0" VerticalAlignment="Top" Height="120" Width="172"/>
+        <DataGrid x:Name="dgVisualizaMes" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="249" Width="272"/>
 
     </Grid>
 </Window>
