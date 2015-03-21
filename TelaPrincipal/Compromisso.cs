@@ -10,10 +10,11 @@ namespace TelaPrincipal
     public class Compromisso
     {
         public string Nome { set; get; }
-        public DateTime Data { set; get; }
+        public DateTime Data { set; get { return Data.ToShortDateString(); } }
         public string HInicial { set; get; }
         public string HFinal { set; get; }
         public bool Urgente { set; get; }
+
     }
 
     public class Compromissos : List<Compromisso>

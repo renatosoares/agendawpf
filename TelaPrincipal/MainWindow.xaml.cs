@@ -119,8 +119,8 @@ namespace TelaPrincipal
         public void visualizarMes()
         {
           
-            var listaMes = Lcomp.Select(v => new { v.Nome, v.Data., v.HInicial, v.HFinal, v.Urgente }).Where(v => v.Data.Month == this.mesSelecionado).OrderBy(v => v.Data);
-            dgListaMes.ItemsSource = listaMes;
+          //  var listaMes = Lcomp.Select(v => new { v.Nome, v.Data, v.HInicial, v.HFinal, v.Urgente }).Where(v => v.Data.Month == this.mesSelecionado).OrderBy(v => v.Data);
+            dgListaMes.ItemsSource = Lcomp.Select(v => new { v.Nome, v.Data, v.HInicial, v.HFinal, v.Urgente }).Where(v => v.Data.Month == this.mesSelecionado).OrderBy(v => v.Data);
             txtMeses.Text = meses[this.mesSelecionado -1]; 
         }
 
