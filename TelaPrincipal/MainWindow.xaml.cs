@@ -25,11 +25,17 @@ namespace TelaPrincipal
     public partial class MainWindow : Window
     {
         Compromissos Lcomp;
+        private int mesSelecionado;
+        private string[] meses; 
         public MainWindow()
         {
             InitializeComponent();
             AbrirArquivo();
+            mesSelecionado = 3;
+            meses = new string[] {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
             visualizarMes();
+            
+            
          //   AddSelectedDates();  
            
           // setDisplayDates(); 
@@ -112,9 +118,25 @@ namespace TelaPrincipal
 
         public void visualizarMes()
         {
-            var listaMes = Lcomp.Select(v => new { v.Data.Month, v.HInicial, v.HFinal, v.Urgente }).OrderBy(v => v.Data);
-            dgListaMes.ItemsSource = listaMes; 
+          
+            var listaMes = Lcomp.Select(v => new { v.Nome, v.Data., v.HInicial, v.HFinal, v.Urgente }).Where(v => v.Data.Month == this.mesSelecionado).OrderBy(v => v.Data);
+            dgListaMes.ItemsSource = listaMes;
+            txtMeses.Text = meses[this.mesSelecionado -1]; 
         }
+
+        private void listarProximoMes(object sender, RoutedEventArgs e)
+        {
+            mesSelecionado++;
+            visualizarMes();
+        }
+
+        private void listarAnteriorMes(object sender, RoutedEventArgs e)
+        {
+            mesSelecionado--;
+            visualizarMes();
+        }
+
+  
         
 
   
@@ -125,3 +147,4 @@ namespace TelaPrincipal
 // http://www.codeproject.com/Articles/30329/Creating-an-Outlook-Calendar-using-WPF-Part
 // http://www.c-sharpcorner.com/uploadfile/mahesh/wpf-calendar-control/
 // http://www.jarloo.com/wpf-calendar-control/
+// http://www.tomasvasquez.com.br/blog/desenvolvimento/c-formatos-customizados-para-o-datetime

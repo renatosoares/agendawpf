@@ -35,9 +35,9 @@
         <TabItem Header="Mês">
             <Grid x:Name="abaMes" Background="#FFE5E5E5" Margin="0,5,0,0" HorizontalAlignment="Left" Width="886">
                 <DataGrid x:Name="dgListaMes" HorizontalAlignment="Left" Height="404" Margin="102,86,0,0" VerticalAlignment="Top" Width="682"/>
-                <Button Content="&gt;" HorizontalAlignment="Left" Margin="801,173,0,0" VerticalAlignment="Top" Width="75" Height="127" FontSize="50" BorderThickness="0" Background="#FFD4D4D4" Foreground="#FF6A6A6A"/>
-                <Button Content="&lt;" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top" Width="75" Height="127" FontSize="50" BorderThickness="0" Background="#FFD4D4D4" Foreground="#FF6A6A6A"/>
-                <TextBox Height="23" Margin="303,30,0,0" TextWrapping="Wrap" Text="Retorno do mês" VerticalAlignment="Top" Width="302" TextAlignment="Center" BorderThickness="0" HorizontalAlignment="Left"/>
+                <Button x:Name="btDireita" Content="&gt;" HorizontalAlignment="Left" Margin="801,173,0,0" VerticalAlignment="Top" Width="75" Height="127" FontSize="50" BorderThickness="0" Background="#FFD4D4D4" Foreground="#FF6A6A6A" Click="listarProximoMes"/>
+                <Button x:Name="btEsquerda" Content="&lt;" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top" Width="75" Height="127" FontSize="50" BorderThickness="0" Background="#FFD4D4D4" Foreground="#FF6A6A6A" Click="listarAnteriorMes"/>
+                <TextBox x:Name="txtMeses" HorizontalAlignment="Left" Height="35" Margin="232,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="424" FontSize="23" TextAlignment="Center" BorderThickness="0"/>
             </Grid>
         </TabItem>
 
